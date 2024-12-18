@@ -1,0 +1,33 @@
+ALGORITHM problem phrase
+VAR
+    Longueur : INTEGER :=0;
+    nb_mots : INTEGER :=1 .
+    nb_voyelles : INTEGER :=0;
+    caractere := CHAR;
+    ph :=STRING;
+    
+  
+BEGIN
+    write ("Veuillez saisir une phrase qui se termine par un point : ")
+    read(ph)
+    i:=0;
+    WHILE (ph[i]!="." ) DO
+        i:=i+1
+        Longueur := Longueur+1;     
+    END_WHILE
+        IF (ph[i]=" ") THEN
+            nb_mots := nb_mots +1;
+        END_IF
+        IF (caractere in  {"a", "e", "i", "o", "u", "y", "A", "E", "I", "O", "U", "Y"}) THEN
+            nb_voyelles := nb_voyelles +1;
+        END_IF
+
+    write("Longueur de la phrase :", Longueur)
+    write("Nombre de mots :", nb_mots )
+    write("Nombre de voyelles :", nb_voyelles)
+
+
+
+
+
+END
